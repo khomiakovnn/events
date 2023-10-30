@@ -1,5 +1,5 @@
 image: Ubuntu1804
-stack: node 12
+stack: node 14
 branches:
   only:
     - main
@@ -7,3 +7,9 @@ cache: node_modules
 install:
   - npm install
 build: off
+deploy:
+  - provider: GitHub
+    artifact: dist
+    draft: true
+    on:
+      branch: main
