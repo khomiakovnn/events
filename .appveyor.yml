@@ -10,14 +10,12 @@ build: off
 build_script:
   - yarn run build
 artifacts:
-  - path: dist
+  - path: dist.zip
 deploy:
   - provider: GitHub
     auth_token:
       secure: Lf9/IBEE4u5AT69Sb1gZLI8VdHYq75umPAZ7gHw7GwpTTbbHrCTIEXdVt1og20B7
-    artifact: dist
+    artifact: dist.zip
     draft: true
     on:
       branch: main
-on_finish:
-  - ps: Publish-AppVeyorArtifact -Path dist -FileName dist.zip -DeploymentName GitHubPages
