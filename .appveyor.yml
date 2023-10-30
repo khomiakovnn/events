@@ -10,7 +10,7 @@ build: off
 build_script:
   - yarn run build
 artifacts:
-  - path: dist.zip
+  - path: dist
 deploy:
   - provider: GitHub
     auth_token:
