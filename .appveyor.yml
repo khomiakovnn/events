@@ -5,7 +5,7 @@ branches:
     - main
 cache: node_modules
 install:
-  - npm install
+  - yarn install
 before_build:
   - cmd: yarn run build
 artifacts:
