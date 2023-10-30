@@ -1,0 +1,19 @@
+version: 1.0.{build}
+image: Visual Studio 2019
+environment:
+  nodejs_version: "14"
+  GH_REPO: "khomiakovnn/events"
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install -g yarn
+build_script:
+  - yarn install
+  - yarn build
+artifacts:
+  - path: dist
+deploy:
+  - provider: GitHub
+    artifact: dist
+    draft: true
+    on:
+      branch: main
