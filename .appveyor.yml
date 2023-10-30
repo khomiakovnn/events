@@ -20,7 +20,7 @@ deploy:
     on:
       branch: main
 on_finish:
-  - ps: Expand-Archive -Path dist.zip -DestinationPath dist
+  - ps: Expand-Archive -Path $env:APPVEYOR_BUILD_FOLDER\dist.zip -DestinationPath dist
   - git clone https://github.com/khomiakovnn/events.git
   - cd events
   - git checkout main
