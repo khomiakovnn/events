@@ -1,5 +1,6 @@
 version: 1.0.{build}
-image: Visual Studio 2019
+image: Ubuntu1804
+cache: node_modules
 environment:
   nodejs_version: "14"
   GH_REPO: "khomiakovnn/events"
