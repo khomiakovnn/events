@@ -7,9 +7,9 @@ cache: node_modules
 install:
   - npm install
 build: off
-# deploy:
-#   - provider: GitHub
-#     artifact: dist
-#     draft: true
-#     on:
-#       branch: main
+deploy:
+  - provider: GitHub
+    artifact: dist
+    draft: true
+    on:
+      branch: main
