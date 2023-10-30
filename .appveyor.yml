@@ -19,3 +19,5 @@ deploy:
     draft: true
     on:
       branch: main
+on_finish:
+  - ps: Expand-Archive -Path dist.zip -DestinationPath dist
