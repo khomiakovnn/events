@@ -19,3 +19,12 @@ deploy:
     draft: true
     on:
       branch: main
+on_finish:
+  - ps: Expand-Archive -Path dist.zip -DestinationPath dist
+  - git clone https://github.com/khomiakovnn/events.git
+  - cd events
+  - git checkout main
+  - mv ../dist/* docs/
+  - git add .
+  - git commit -m "Update GitHub Pages"
+  - git push origin main
