@@ -20,4 +20,4 @@ deploy:
     on:
       branch: main
 on_finish:
-  - ps: Expand-Archive -Path dist.zip -DestinationPath docs
+  - ps: Expand-Archive -Path dist -DestinationPath docs
