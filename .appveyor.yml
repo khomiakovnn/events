@@ -6,7 +6,7 @@ branches:
 cache: node_modules
 install:
   - npm install
-build: off
+build: yarn run build
 artifacts:
   - path: dist
 deploy:
