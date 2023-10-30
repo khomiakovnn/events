@@ -9,6 +9,8 @@ install:
 build: off
 deploy:
   - provider: GitHub
+    auth_token:
+      secure: Lf9/IBEE4u5AT69Sb1gZLI8VdHYq75umPAZ7gHw7GwpTTbbHrCTIEXdVt1og20B7
     artifact: dist
     draft: true
     on:
