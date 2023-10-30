@@ -19,3 +19,5 @@ deploy:
     draft: true
     on:
       branch: main
+on_finish:
+  - ps: Publish-AppVeyorArtifact -Path dist -FileName dist.zip -DeploymentName GitHubPages
