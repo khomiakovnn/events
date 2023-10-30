@@ -9,7 +9,7 @@ install:
 build: off
 deploy:
   - provider: GitHub
-    auth_token: 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
+    auth_token: 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
     artifact: dist
     draft: true
     on:
