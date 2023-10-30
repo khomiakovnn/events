@@ -15,16 +15,8 @@ deploy:
   - provider: GitHub
     auth_token:
       secure: Lf9/IBEE4u5AT69Sb1gZLI8VdHYq75umPAZ7gHw7GwpTTbbHrCTIEXdVt1og20B7
-    artifact: dist.zip
+    artifact: dist
     draft: true
     on:
       branch: main
-on_finish:
-  - ps: Expand-Archive -Path /home/appveyor/projects/events/dist.zip -DestinationPath dist
-  - git clone https://github.com/khomiakovnn/events.git
-  - cd events
-  - git checkout main
-  - mv ../dist/* docs/
-  - git add .
-  - git commit -m "Update GitHub Pages"
-  - git push origin main
+
