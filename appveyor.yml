@@ -13,6 +13,8 @@ artifacts:
   - path: dist
 deploy:
   - provider: GitHub
+    auth_token:
+      secure: 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
     artifact: dist
     draft: true
     on:
