@@ -1,14 +1,5 @@
-let randomCell = Math.floor(Math.random() * 16) + 1;
-document.getElementById(randomCell).className = 'selected_cell';
-let activCell = randomCell
+import Field from "./field";
 
-setInterval(() => {
-    randomCell = Math.floor(Math.random() * 16) + 1
-    while (randomCell == activCell) {
-        randomCell = Math.floor(Math.random() * 16) + 1
-    }
+const field = new Field();
 
-    document.getElementById(activCell).className = 'cell'
-    document.getElementById(randomCell).className = 'selected_cell'
-    activCell = randomCell
-}, 1000)
+field.startCycle()
